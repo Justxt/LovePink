@@ -23,9 +23,22 @@
     box-sizing: border-box;
     width: calc(50% - 20px);
     margin: 10px;
-    border: 1px solid #ddd;
+    border: 2px solid #ff20bf;
     padding: 10px;
     text-align: center;
 }
+
+.logo {
+    align-self: center;
+
+}
+
+.busqueda {
+    align-self: center;
+
+}
+
+
+
 
 
