@@ -5,12 +5,16 @@
 @import url('./views/carrito-view.css');
 @import url('./views/promos-view.css');
 @import url('./views/z1-view.css');
-@import url('./views/z2-view.css');    html {
+@import url('./views/z2-view.css');
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+
+html {
       --lumo-border-radius-s: calc(var(--lumo-size-m) / 6);
       --lumo-border-radius-m: calc(var(--lumo-size-m) / 2);
       --lumo-border-radius-l: var(--lumo-size-m);
 
-    }
+
+}
 
 
 .Productos {
@@ -38,7 +42,31 @@
 
 }
 
+.hola {
+    align-self: center;
+    color: #ff20bf;
+    font-family: 'Monsieur La Doulaise', cursive;
+    padding: 10px;
+}
 
+.hola2 {
+    align-self: center;
+    color: #ff20bf;
+}
+
+.hola3 {
+    align-self: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.centrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
 
 
 
