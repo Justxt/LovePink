@@ -1,0 +1,31 @@
+@import url('./views/catalogo-view.css');
+@import url('./views/admagg-view.css');
+@import url('./views/admdel-view.css');
+@import url('./views/ventana-view.css');
+@import url('./views/carrito-view.css');
+@import url('./views/promos-view.css');
+@import url('./views/z1-view.css');
+@import url('./views/z2-view.css');    html {
+      --lumo-border-radius-s: calc(var(--lumo-size-m) / 6);
+      --lumo-border-radius-m: calc(var(--lumo-size-m) / 2);
+      --lumo-border-radius-l: var(--lumo-size-m);
+
+    }
+
+
+.Productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ProductosVentas {
+    box-sizing: border-box;
+    width: calc(50% - 20px);
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+
