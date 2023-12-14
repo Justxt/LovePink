@@ -64,13 +64,13 @@ public class CatalogoView extends Composite<VerticalLayout> {
 
     public List<Producto> obtenerProductos() {
         List<Producto> productos = new ArrayList<>();
-        productos.add(new Producto("Pantalon Mujer", 499.99, "images/img1.jpeg"));
-        productos.add(new Producto("Pantalon faja mujer", 69.99, "images/img2.jpeg"));
-        productos.add(new Producto("Consola PlayStation", 499.99, "images/img3.jpeg"));
-        productos.add(new Producto("Mando PlayStation", 69.99, "images/img4.jpeg"));
-        productos.add(new Producto("Consola Xbox Series X", 499.99, "images/img5.jpeg"));
-        productos.add(new Producto("Consola PlayStation", 499.99, "images/img3.jpeg"));
-        productos.add(new Producto("Mando PlayStation", 69.99, "images/img4.jpeg"));
+        productos.add(new Producto("Levanta Cola X", 12.99, "images/img1.jpeg"));
+        productos.add(new Producto("Pantalon Caderas", 11.99, "images/img2.jpeg"));
+        productos.add(new Producto("Faja Algodon Su", 9.99, "images/img3.jpeg"));
+        productos.add(new Producto("Sosten Algodon", 6.99, "images/img4.jpeg"));
+        productos.add(new Producto("Pantalon Mujer", 12.99, "images/img5.jpeg"));
+        productos.add(new Producto("Faja Algodon Su", 9.99, "images/img3.jpeg"));
+        productos.add(new Producto("Sosten Poliestireno", 12.99, "images/img4.jpeg"));
         return productos;
     }
 
