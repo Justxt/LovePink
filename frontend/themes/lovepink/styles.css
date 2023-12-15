@@ -16,6 +16,13 @@ html {
 
 }
 
+html {
+    background-image: url("/images/back2.png");
+    background-repeat: no-repeat;
+    background-position: 0 300px;
+    background-size: 400%;
+}
+
 
 .Productos {
     display: flex;
@@ -60,13 +67,49 @@ html {
     padding: 10px;
 }
 
-.centrado {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.descripcionTitulo {
+    text-align: start;
     justify-content: center;
-    padding: 50px;
+    padding: 20px;
 }
 
+.descrip {
+    text-align: justify-all;
+    justify-content: center;
+    padding: 1px 30px;
+    display: flex;
+}
+
+.imagenesDelProducto {
+    text-align: start;
+    justify-content: center;
+    padding: 20px;
+}
+
+.imagenesProducto {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.caracteristicasTitulo {
+    text-align: start;
+    justify-content: center;
+    padding: 20px;
+}
+
+.caracteristicas {
+    text-align: start;
+    justify-content: center;
+    padding: 1px 20px;
+}
+
+.caracteristicas span{
+
+    display: block;
+    margin-bottom: 8px;
+
+}
 
 

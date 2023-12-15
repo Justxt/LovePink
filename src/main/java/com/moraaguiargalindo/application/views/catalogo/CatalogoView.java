@@ -1,6 +1,5 @@
 package com.moraaguiargalindo.application.views.catalogo;
 
-import com.moraaguiargalindo.application.views.ventana.VentanaView;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -8,6 +7,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 import com.vaadin.flow.component.textfield.TextField;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 
@@ -18,10 +18,8 @@ import java.util.List;
 @PageTitle("Catalogo")
 @Route(value = "catalogo")
 @RouteAlias(value = "")
+@Scope("prototype")
 public class CatalogoView extends Composite<VerticalLayout> {
-
-
-    private final TextField filtro;
 
 
     public CatalogoView() {
@@ -29,12 +27,13 @@ public class CatalogoView extends Composite<VerticalLayout> {
         layout.setPadding(true);
         layout.setSpacing(true);
 
+
         Image logo = new Image("images/logo.jpeg", "Logo");
         logo.setWidth("20%");
         logo.addClassName("logo");
         getContent().add(logo);
 
-        filtro = new TextField("");
+        TextField filtro = new TextField("");
         filtro.setPlaceholder("Buscar productos y mas..");
         filtro.setWidth("100%");
         filtro.addClassName("busqueda");
@@ -46,15 +45,13 @@ public class CatalogoView extends Composite<VerticalLayout> {
         banner.addClassName("banner");
         getContent().add(banner);
 
-        H1 hola = new H1("Bienvenid@s");
-        H2 hola2 = new H2("Love Pink");
-        Span hola3 = new Span("Jeans con horma Levanta cola o Push up, en Love Me Jeans siempre creamos modelos de tendencia, " +
+        H1 hola2 = new H1("Love Pink");
+        Span hola3 = new Span("Jeans con horma Levanta cola o Push up, en Love Pink Jeans siempre creamos modelos de tendencia, " +
                 "ofreciendo la mejor calidad y respaldo en cada prenda Colombiana Love Pink Jeans!");
-        hola.addClassName("hola");
         hola2.addClassName("hola2");
         hola3.addClassName("hola3");
 
-        getContent().add(hola, hola2, hola3);
+        getContent().add(hola2, hola3);
 
         List<Producto> productos = obtenerProductos();
         mostrarProductos(productos);
@@ -64,13 +61,40 @@ public class CatalogoView extends Composite<VerticalLayout> {
 
     public List<Producto> obtenerProductos() {
         List<Producto> productos = new ArrayList<>();
-        productos.add(new Producto("Levanta Cola X", 12.99, "images/img1.jpeg"));
-        productos.add(new Producto("Pantalon Caderas", 11.99, "images/img2.jpeg"));
-        productos.add(new Producto("Faja Algodon Su", 9.99, "images/img3.jpeg"));
-        productos.add(new Producto("Sosten Algodon", 6.99, "images/img4.jpeg"));
-        productos.add(new Producto("Pantalon Mujer", 12.99, "images/img5.jpeg"));
-        productos.add(new Producto("Faja Algodon Su", 9.99, "images/img3.jpeg"));
-        productos.add(new Producto("Sosten Poliestireno", 12.99, "images/img4.jpeg"));
+        productos.add(new Producto("Levanta Cola X", 12.99, "images/img1.jpeg", "Jean azul claro tipo flare para mujer" +
+                " cuenta con 5 bolsillos, tiro alto, detalles con rotos en frente, bota ancha y un fit ajustado desde la cadera hasta la rodilla." +
+                " Crea un total look vintage combinando esta prenda con una blusa y unos botines, lucirás fenomenal para salir de compras" +
+                " con tus amigas al centro comercial."));
+
+        productos.add(new Producto("Pantalon Caderas", 11.99, "images/img2.jpeg", "Jean azul claro tipo flare para mujer" +
+                " cuenta con 5 bolsillos, tiro alto, detalles con rotos en frente, bota ancha y un fit ajustado desde la cadera hasta la rodilla." +
+                " Crea un total look vintage combinando esta prenda con una blusa y unos botines, lucirás fenomenal para salir de compras" +
+                " con tus amigas al centro comercial."));
+
+        productos.add(new Producto("Faja Algodon Su", 9.99, "images/img3.jpeg", "Jean azul claro tipo flare para mujer" +
+                " cuenta con 5 bolsillos, tiro alto, detalles con rotos en frente, bota ancha y un fit ajustado desde la cadera hasta la rodilla." +
+                " Crea un total look vintage combinando esta prenda con una blusa y unos botines, lucirás fenomenal para salir de compras" +
+                " con tus amigas al centro comercial."));
+
+        productos.add(new Producto("Sosten Algodon", 6.99, "images/img4.jpeg", "Jean azul claro tipo flare para mujer" +
+                " cuenta con 5 bolsillos, tiro alto, detalles con rotos en frente, bota ancha y un fit ajustado desde la cadera hasta la rodilla." +
+                " Crea un total look vintage combinando esta prenda con una blusa y unos botines, lucirás fenomenal para salir de compras" +
+                " con tus amigas al centro comercial."));
+
+        productos.add(new Producto("Pantalon Mujer", 12.99, "images/img5.jpeg", "Jean azul claro tipo flare para mujer" +
+                " cuenta con 5 bolsillos, tiro alto, detalles con rotos en frente, bota ancha y un fit ajustado desde la cadera hasta la rodilla." +
+                " Crea un total look vintage combinando esta prenda con una blusa y unos botines, lucirás fenomenal para salir de compras" +
+                " con tus amigas al centro comercial."));
+
+        productos.add(new Producto("Faja Algodon Su", 9.99, "images/img3.jpeg", "Jean azul claro tipo flare para mujer" +
+                " cuenta con 5 bolsillos, tiro alto, detalles con rotos en frente, bota ancha y un fit ajustado desde la cadera hasta la rodilla." +
+                " Crea un total look vintage combinando esta prenda con una blusa y unos botines, lucirás fenomenal para salir de compras" +
+                " con tus amigas al centro comercial."));
+
+        productos.add(new Producto("Sosten Poliestireno", 12.99, "images/img4.jpeg", "Jean azul claro tipo flare para mujer" +
+                " cuenta con 5 bolsillos, tiro alto, detalles con rotos en frente, bota ancha y un fit ajustado desde la cadera hasta la rodilla." +
+                " Crea un total look vintage combinando esta prenda con una blusa y unos botines, lucirás fenomenal para salir de compras" +
+                " con tus amigas al centro comercial."));
         return productos;
     }
 

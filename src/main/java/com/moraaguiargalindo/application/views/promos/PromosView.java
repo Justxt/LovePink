@@ -17,7 +17,7 @@ public class PromosView extends Composite<VerticalLayout> {
         getContent().setWidth("100%");
         getContent().getStyle().set("flex-grow", "1");
 
-        Image h = new Image("images/img.png", "logo");
+        Image h = new Image("images/imgicono.png", "logo");
         getContent().add(h);
     }
 }
